@@ -2,7 +2,7 @@ const taskDescription = [
     "<strong>Task Description: </strong>In the following you will find the description of a system for managing a laboratory. A laboratory has a set of available equipment and students can sign up to and sign off from a laboratory. Additionally, they can book equipment to work with. Implement the classes for laboratory and students as described below. "
 ]
 
-const tasks = [
+const task1 = [
     // Task 1
     "Create two classes, one named Lab and the other Student.",
     // Task 2

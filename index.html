@@ -20,22 +20,34 @@
             display: block;
             margin-top: 20px;
         }
+        .hide {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div id="taskDescription">
-
     </div>
 
     <div id="nameInputSection">
         <label for="participantName">Enter your name:</label>
         <input type="text" id="participantName" name="participantName">
     </div>
+
     <div id="dateInputSection">
         <label for="date">Enter the date (day-month-year):</label>
         <input type="text" id="date" name="date">
+    </div>
+
+    <div id="experimentMethodSection">
+        <label>Experiment method:</label>
+        <input type="radio" id="withAI" name="aiOption" value="With AI">
+        <label for="withAI">With AI</label>
+        <input type="radio" id="withoutAI" name="aiOption" value="Without AI">
+        <label for="withoutAI">Without AI</label>
         <button id="submit">Submit</button>
     </div>
+    
 
     <div id="displayText"></div>
     <button id="showTextButton" style="display:none;">Start Experiment</button>

@@ -1,22 +1,24 @@
-let currentIndex = 0;
-let timerStart = null;
-let displayTextContainer = document.getElementById('displayText');
-let showTextButton = document.getElementById('showTextButton');
-
-let logMessages = [];
-
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Div elements from index
     const descriptionElement = document.getElementById('taskDescription');
     const showTextButton = document.getElementById('showTextButton');
     const nameInputSection = document.getElementById('nameInputSection');
+    const dateInputSection = document.getElementById('dateInputSection');
+    const experimentMethodSection = document.getElementById('experimentMethodSection');
+
+    // Javascript elements
     const submitButton = document.getElementById('submit');
     const participantNameInput = document.getElementById('participantName');
     const dateInput = document.getElementById('date');
-    let currentIndex = -1;
+    const withAIInput = document.getElementById('withAI');
+    const withoutAIInput = document.getElementById('withoutAI');
+    const displayTextContainer = document.getElementById('displayText');
+    const logMessages = [];
+    
+    let currentIndex = 0;
     let timerStart = null;
-    let logMessages = [];
-
+    
     if (taskDescription && taskDescription.length > 0) {
         descriptionElement.innerHTML = `<p>${taskDescription[0]}</p>`;
     }
@@ -24,15 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
     showTextButton.style.display = 'none';
 
     submitButton.addEventListener('click', () => {
-        let participantName = participantNameInput.value.trim();
-        let experimentDate = dateInput.value.trim();
+        const participantName = participantNameInput.value.trim();
+        const experimentDate = dateInput.value.trim();
+        const aiOption = withAIInput.checked ? "With AI" : "Without AI";
+
         if (participantName.length > 0 && experimentDate.length > 0) {
             logMessages.push(`Participant Name: ${participantName}`);
             logMessages.push(`Date of Experiment: ${experimentDate}`);
-            nameInputSection.style.display = 'none';
+            logMessages.push(`AI Option: ${aiOption}`);
+
+            nameInputSection.classList.add('hide');
+            dateInputSection.classList.add('hide');
+            experimentMethodSection.classList.add('hide');
+            submitButton.classList.add('hide');
+            
             showTextButton.style.display = '';
         } else {
-            alert('Please enter your name and the date to start the experiment.');
+            alert('Please enter your name, the date, and choose an AI option to start the experiment.');
         }
     });
 
@@ -81,4 +91,3 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadLink.click();
     });
 });
-
