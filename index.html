@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Question Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .text-section {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        button {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="taskDescription">
+
+    </div>
+
+    <div id="nameInputSection">
+        <label for="participantName">Enter your name:</label>
+        <input type="text" id="participantName" name="participantName">
+        <label for="date">Enter the date (day-month-year):</label>
+        <input type="text" id="date" name="date">
+        <button id="submit">Submit</button>
+    </div>
+
+    <div id="displayText"></div>
+    <button id="showTextButton" style="display:none;">Start Experiment</button>
+
+    <div id="displayText"></div>
+
+    <script src="task1.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
