@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const experimentMethodSection = document.getElementById('experimentMethodSection');
 
     // Javascript elements
-    const submitButton = document.getElementById('submit');
     const participantNameInput = document.getElementById('participantName');
     const dateInput = document.getElementById('date');
     const withAIInput = document.getElementById('withAI');
     const withoutAIInput = document.getElementById('withoutAI');
+    const submitButton = document.getElementById('submit');
     const displayTextContainer = document.getElementById('displayText');
     const logMessages = [];
     
-    let currentIndex = 0;
+    let currentIndex = -1;
     let timerStart = null;
     
     if (taskDescription && taskDescription.length > 0) {
@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(downloadLogButton);
 
     showTextButton.textContent = "Start Experiment";
-
     showTextButton.addEventListener('click', function() {
         if (timerStart !== null) {
             const timerEnd = new Date();
@@ -59,12 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
             logMessages.push("Time elapsed for task " + (currentIndex + 1) + ": " + elapsedSeconds + " seconds");
             timerStart = null;
         }
-
+    
         if (currentIndex < task1.length - 1) {
             currentIndex++; 
-            displayTask(currentIndex);
             timerStart = new Date();
-
+            displayTask(currentIndex); // Display the next task after incrementing currentIndex
+    
             if (currentIndex < task1.length - 1) {
                 this.textContent = "Next Task";
             } else {
@@ -74,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.disabled = true;
         }
     });
+    
 
     function displayTask(index) {
         const newParagraph = document.createElement('p');
