@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentIndex < task1.length - 1) {
             currentIndex++; 
             timerStart = new Date();
-            displayTask(currentIndex); // Display the next task after incrementing currentIndex
+            displayTask(currentIndex);
     
             if (currentIndex < task1.length - 1) {
                 this.textContent = "Next Task";
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayTask(index) {
         const newParagraph = document.createElement('p');
-        newParagraph.innerText = task1[index];
+        newParagraph.innerHTML = task1[index];
         newParagraph.className = 'text-section';
         displayTextContainer.appendChild(newParagraph);
     }
