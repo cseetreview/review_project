@@ -6,6 +6,9 @@ const task3 = [
 // Task 1
 "Task 1: Implement a class called <strong>Customer</strong> that has the fields: <strong>preferences</strong> of type Set&lt;String&gt; for customer preferences, <strong>advertisements</strong> of type List&lt;String&gt; for a list of advertisements received, and <strong>maxAdvs</strong> of type <strong>int</strong> for the maximum number of advertisements a customer can have.",
 
+// Task 2
+"Task 2: Include a constructor to initialize <strong>preferences</strong> and <strong>maxAdvs</strong>, setting <strong>advertisements</strong> as an empty list.",
+
 // Task 3
 "Task 3: Implement a method called <strong>getPreferences</strong> in the <strong>Customer</strong> Class that returns the value of the corresponding field.",
 
