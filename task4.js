@@ -4,13 +4,13 @@ const taskDescription = [
 
 const task4 = [
 // Task 1
-"Task 1: Implement a class called <strong>Member</strong> with the following fields: <strong>name</strong> of type <strong>String</strong>, <strong>email</strong> of type <strong>String</strong>, and <strong>borrowedBooks</strong> of type <strong>List<Book></strong>.",
+"Task 1: Implement a class called <strong>Member</strong> with the following fields: <strong>name</strong> of type <strong>String</strong>, and <strong>borrowedBooks</strong> of type <strong>List<Book></strong>.",
 
 // Task 2
-"Task 2: Implement a constructor for the <strong>Member</strong> class with its three parameters. Initialize the <strong>borrowedBooks</strong> list as an empty list.",
+"Task 2: Implement a constructor for the <strong>Member</strong> class with its two parameters. Initialize the <strong>borrowedBooks</strong> list as an empty list.",
 
 // Task 3
-// "Task 3: Implement a class called <strong>Book</strong> with the following fields: <strong>title</strong> of type <strong>String</strong> representing the book's title, <strong>author</strong> of type <strong>String</strong> representing the book's author, <strong>genre</strong> of type <strong>String</strong> representing the book's genre, and <strong>publicationYear</strong> of type <strong>int</strong> representing the book's publication year.",
+"Task 3: Implement getters and setters called <strong>getName</strong>, <strong>getBorrowedBooks</strong>, <strong>setName</strong>, and <strong>setBorrowedBooks</strong> in the Member class that returns and sets the respective value of the field.",
 
 // Task 4
 // "Task 4: Implement a constructor for the <strong>Book</strong> class that takes four arguments: <strong>title</strong> (a <strong>String</strong>) representing the book's title, <strong>author</strong> (a <strong>String</strong>) representing the book's author, <strong>genre</strong> (a <strong>String</strong>) representing the book's genre, and <strong>publicationYear</strong> (an <strong>int</strong>) representing the book's publication year.",

@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let currentIndex = -1;
     let timerStart = null;
+
+    let aiOption = '';
+    let currentTaskData;
     
     if (taskDescription && taskDescription.length > 0) {
         descriptionElement.innerHTML = `<p>${taskDescription[0]}</p>`;
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.addEventListener('click', () => {
         const participantName = participantNameInput.value.trim();
         const experimentDate = dateInput.value.trim();
-        const aiOption = withAIInput.checked ? "With AI" : "Without AI";
+        aiOption = withAIInput.checked ? "With AI" : "Without AI";
 
         if (participantName.length > 0 && experimentDate.length > 0) {
             logMessages.push(`Participant Name: ${participantName}`);
@@ -60,6 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadScript(scriptName) {
         const scriptElement = document.createElement('script');
         scriptElement.src = scriptName;
+        scriptElement.onload = function() {
+            if (scriptName === "task3.js") {
+                currentTaskData = task3;
+                if (aiOption === "With AI") {
+                    displayTask(0);
+                }
+            } else if (scriptName === "task4.js") {
+                currentTaskData = task4;
+                if (aiOption === "Without AI") {
+                    displayTask(0);
+                }
+            }
+        };
+        scriptElement.onerror = function() {
+            console.error('Error loading script:', scriptName);
+        };
         document.body.appendChild(scriptElement);
     }
 
@@ -76,12 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
             timerStart = null;
         }
     
-        if (currentIndex < task3.length - 1) {
+        if (currentIndex < currentTaskData.length - 1) { // Use currentTaskData here
             currentIndex++; 
             timerStart = new Date();
             displayTask(currentIndex);
     
-            if (currentIndex < task3.length - 1) {
+            if (currentIndex < currentTaskData.length - 1) { // Use currentTaskData here
                 this.textContent = "Next Task";
             } else {
                 this.textContent = "Finish Experiment";
@@ -91,13 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-
     function displayTask(index) {
         const newParagraph = document.createElement('p');
-        newParagraph.innerHTML = task3[index];
+        newParagraph.innerHTML = currentTaskData[index];
         newParagraph.className = 'text-section';
         displayTextContainer.appendChild(newParagraph);
-    }
+    }        
 
     downloadLogButton.addEventListener('click', () => {
         const logBlob = new Blob([logMessages.join('\n')], {type: 'text/plain'});
