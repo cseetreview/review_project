@@ -19,17 +19,17 @@ const task5 = [
 "Task 5: In class <strong>Robot</strong>, implement a method called <strong>timeToCharge()</strong> that returns a whole number representing the number of minutes that it takes to charge the battery to maximum capacity.",
 
 // Task 6
-"Task 6: In class Robot, implement a method called charge() that sets the batteryLevel to the maximum capacity.",
+"Task 6: In class <strong>Robot</strong>, implement a method called <strong>charge()</strong> that sets the <strong>batteryLevel</strong> to the maximum capacity.",
 
 // Task 7
-"Task 7: Implement a class called ServiceRobot, that is a subclass of Robot. This class has a field called taskInfo of type Map<String,Integer> that contains the name of tasks mapped to their required energy. Implement the constructor of the class ServiceRobot(int m, int b, int c). The taskInfo should be initialised as an empty map in the constructor.",
+"Task 7: Implement a class called <strong>ServiceRobot</strong>, that is a subclass of <strong>Robot</strong>. This class has a field called <strong>taskInfo</strong> of type <strong>Map<String,Integer></strong> that contains the name of tasks mapped to their required energy. Implement the constructor of the class ServiceRobot(int m, int b, int c). The taskInfo should be initialised as an empty map in the constructor.",
 
 // Task 8
-"Task 8: In class ServiceRobot, implement a method defineTask(), that reads a task name and its required energy (included in two consecutive lines) from user input. If the required energy is negative or greater than the maximum battery capacity, it throws an IllegalArgumentException with message 'The value of required energy is not valid'. Otherwise, it adds the task name mapped to its required energy in tasksInfo map. Example of user input is: 'Clean windows 100' ",
+"Task 8: In class <strong>ServiceRobot</strong>,, implement a method defineTask(), that reads a task name and its required energy (included in two consecutive lines) from user input. If the required energy is negative or greater than the maximum battery capacity, it throws an IllegalArgumentException with message 'The value of required energy is not valid'. Otherwise, it adds the task name mapped to its required energy in tasksInfo map. Example of user input is: 'Clean windows 100' ",
 
 // Task 9
-"Task 9: In class ServiceRobot, implement a method charge() that prints 'Time to charge is <x> minutes' where <x> is the number of minutes it takes to charge the battery to the maximum capacity and sets the batteryLevel to maxLevel.",
+"Task 9: In class <strong>ServiceRobot</strong>,, implement a method charge() that prints 'Time to charge is <x> minutes' where <x> is the number of minutes it takes to charge the battery to the maximum capacity and sets the batteryLevel to maxLevel.",
 
 // Task 10
-"Task 10: In class ServiceRobot, implement a method service(int n) that reads n task names from the user input (each task name is in a line). Every time it reads a task name, if it is not in taskInfo it prints 'Sorry the task <name> is not among my defined tasks!' where <name> is the name of the task. Otherwise, it performs the task such that if the batteryLevel is adequate, it reduces the battery level with required energy of the task and prints 'performing task <name>'. Otherwise it prints 'Sorry I do not have enough battery'. In any case, the method should continue until all n tasks are read from the user input."
+"Task 10: In class <strong>ServiceRobot</strong>,, implement a method service(int n) that reads n task names from the user input (each task name is in a line). Every time it reads a task name, if it is not in taskInfo it prints 'Sorry the task <name> is not among my defined tasks!' where <name> is the name of the task. Otherwise, it performs the task such that if the batteryLevel is adequate, it reduces the battery level with required energy of the task and prints 'performing task <name>'. Otherwise it prints 'Sorry I do not have enough battery'. In any case, the method should continue until all n tasks are read from the user input."
 ]
