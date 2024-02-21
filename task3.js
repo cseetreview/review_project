@@ -29,4 +29,7 @@ const task3 = [
 
 // Task 9
 //"Task 9: Implement a method <strong>publishAdv(String adv, Customer cm)</strong> that tries adding the advertisement <strong>adv</strong> to the list of advertisements of the customer <strong>cm</strong> if at least one word in <strong>adv</strong> is an exact match for one of the preferences of the customer <strong>cm</strong>. For example, advertisement \"Java programmer\" matches the preference \"Java\". Note that just containing words is not considered an exact match, for example, \"JavaScript\" is not a match in this example."
+
+// Task 10
+"Task 10: In class <strong>AdvertisingPlatform</strong>, implement a method called <strong>checkValidity(String adv)</strong> that checks the validity of advertisement <strong>adv</strong> by checking that the advertisement has at most 20 words and does not have any of the words in the forbidden words. If the advertisement is valid it returns <strong>true</strong>. Otherwise it returns <strong>false</strong>. (Again only consider exact matches.)",
 ]
