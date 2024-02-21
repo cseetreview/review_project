@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     // Div elements from index
     const descriptionElement = document.getElementById('taskDescription');
@@ -25,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showTextButton.style.display = 'none';
 
+    // Event listener for the submit button
     submitButton.addEventListener('click', () => {
         const participantName = participantNameInput.value.trim();
         const experimentDate = dateInput.value.trim();
@@ -45,6 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Please enter your name, the date, and choose an AI option to start the experiment.');
         }
     });
+
+    // Event listener for the "With AI" option
+    withAIInput.addEventListener('click', () => {
+        loadScript('task3.js');
+    });
+
+    // Event listener for the "Without AI" option
+    withoutAIInput.addEventListener('click', () => {
+        loadScript('task4.js');
+    });
+
+    // Function to dynamically load JavaScript file
+    function loadScript(scriptName) {
+        const scriptElement = document.createElement('script');
+        scriptElement.src = scriptName;
+        document.body.appendChild(scriptElement);
+    }
 
     const downloadLogButton = document.createElement('button');
     downloadLogButton.textContent = 'Access Log';
