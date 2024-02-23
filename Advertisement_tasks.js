@@ -2,7 +2,7 @@ const taskDescription = [
     "In the following you will find the description of an advertisement company in which it is possible to publish advertisements to customers. All the fields should be private and all the methods in the description should be public. In the implementation, you are not allowed to add methods which are not a part of the description unless the method is declared as private."
 ]
 
-const task3 = [
+const advertisement_tasks = [
 // Task 1
 "Task 1: Implement a class called <strong>Customer</strong> that has the fields: <strong>preferences</strong> of type Set&lt;String&gt; for customer preferences, <strong>advertisements</strong> of type List&lt;String&gt; for a list of advertisements received, and <strong>maxAdvs</strong> of type <strong>int</strong> for the maximum number of advertisements a customer can have.",
 
