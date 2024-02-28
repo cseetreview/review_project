@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for the "Without AI" option
     withoutAIInput.addEventListener('click', () => {
-        loadScript('task4.js');
+        loadScript('task5.js');
     });
 
     // Function to dynamically load JavaScript file
@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (aiOption === "With AI") {
                     displayTask(0);
                 }
-            } else if (scriptName === "task4.js") {
-                currentTaskData = task4;
+            } else if (scriptName === "task5.js") {
+                currentTaskData = task5;
                 if (aiOption === "Without AI") {
                     displayTask(0);
                 }
