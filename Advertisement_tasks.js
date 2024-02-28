@@ -13,7 +13,7 @@ const advertisement_tasks = [
 // "Task 3: Implement a method called <strong>getPreferences</strong> in the <strong>Customer</strong> Class that returns the value of the corresponding field.",
 
 // Task 4
-"Task 4: Implement a method called <strong>addAdvertisement</strong><strong>String adv</strong> in the <strong>Customer</strong> Class which adds <strong>adv</strong> after the last item in advertisements list if the number of its items remains less than or equal to maxAdvs and returns true. Otherwise, it just returns false.",
+"Task 4: Implement a method called <strong>addAdvertisement(String adv)</strong> in the <strong>Customer</strong> Class which adds <strong>adv</strong> after the last item in advertisements list if the number of its items remains less than or equal to maxAdvs and returns true. Otherwise, it just returns false.",
 
 // Task 5
 // "Task 5: In class <strong>Customer</strong>, implement a method called <strong>addPreferences(String[] newPreferences)</strong> that adds the elements of <strong>newPreferences</strong> to the preferences set. Also, implement a method <strong>remove(String pref)</strong> that removes pref from preferences set.",
