@@ -2,7 +2,7 @@ const taskDescription = [
 "In the following you will find the description of a programming problem. All the fields should be private and all the methods in the description should be public. In the implementation, you are not allowed to add methods which are not a part of the description unless the method is declared as private."
 ]
 
-const task5 = [
+const robot_tasks = [
 // Task 1
 "Task 1: Implement a class called <strong>Robot</strong>, that has a field <strong>batteryLevel</strong> of type <strong>int</strong> that shows the current battery level and a field <strong>maxLevel</strong> of type int that shows the maximum capacity of the battery, and <strong>chargingRate</strong> of type int that shows the time (number of minutes) it takes for battery level to increase by one unit.", 
 

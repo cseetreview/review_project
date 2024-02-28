@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for the "With AI" option
     withAIInput.addEventListener('click', () => {
-        loadScript('task3.js');
+        loadScript('Advertisement_tasks.js');
     });
 
     // Event listener for the "Without AI" option
     withoutAIInput.addEventListener('click', () => {
-        loadScript('task5.js');
+        loadScript('Robot_tasks.js');
     });
 
     // Function to dynamically load JavaScript file
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const scriptElement = document.createElement('script');
         scriptElement.src = scriptName;
         scriptElement.onload = function() {
-            if (scriptName === "task3.js") {
-                currentTaskData = task3;
+            if (scriptName === "Advertisement_tasks.js") {
+                currentTaskData = advertisement_tasks;
                 if (aiOption === "With AI") {
                     displayTask(0);
                 }
-            } else if (scriptName === "task5.js") {
-                currentTaskData = task5;
+            } else if (scriptName === "Robot_tasks.js") {
+                currentTaskData = robot_tasks;
                 if (aiOption === "Without AI") {
                     displayTask(0);
                 }
