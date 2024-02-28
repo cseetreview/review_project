@@ -25,7 +25,7 @@ const advertisement_tasks = [
 "Task 5:<br> Implement a class called <code>AdvertisingPlatform</code> that has the fields <code>subscribers</code> of type <code>List&lt;Customer&gt;</code> and <code>forbiddenWords</code> of type <code>Set&lt;String&gt;</code>. The constructor <code>AdvertisingPlatform(Set&lt;String&gt; forbiddenWords)</code> initializes the <code>forbiddenWords</code> field with the parameter of the constructor and initializes the <code>subscribers</code> as an empty list.",
 
 // Task 8
-"Task 6:<br> Implement a method called <code>addCustomer(Customer cm)</code> that adds the customer <code>cm</code> to the subscribers list if it is not already in the list and prints 'customer is added!'. Otherwise, it just prints 'customer already exists!'.",
+"Task 6:<br> Implement a method called <code>addCustomer(Customer cm)</code> that adds the customer <code>cm</code> to the subscribers list if it is not already in the list and prints <strong>'customer is added!'</strong>. Otherwise, it just prints <strong>'customer already exists!'</strong>.",
 
 // Task 9
 //"Task 9: Implement a method <code>publishAdv(String adv, Customer cm)</code> that tries adding the advertisement <code>adv</code> to the list of advertisements of the customer <code>cm</code> if at least one word in <code>adv</code> is an exact match for one of the preferences of the customer <code>cm</code>. For example, advertisement \"Java programmer\" matches the preference \"Java\". Note that just containing words is not considered an exact match, for example, \"JavaScript\" is not a match in this example."
