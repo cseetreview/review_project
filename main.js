@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let currentIndex = -1;
     let timerStart = null;
+    let checkboxStatusLogged = false;
 
     let aiOption = '';
     let currentTaskData;
@@ -135,8 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
         displayTextContainer.removeChild(labelToRemove);
     }
 
-    const checkboxChecked = checkboxToRemove && checkboxToRemove.checked ? 'Checked' : 'Unchecked';
-    logMessages.push(`Consent to terms and agreement: ${checkboxChecked}`);
+    if (!checkboxStatusLogged) {
+        const checkboxChecked = checkboxToRemove && checkboxToRemove.checked ? 'Checked' : 'Unchecked';
+        logMessages.push(`Consent given to terms and conditions: ${checkboxChecked}`);
+        checkboxStatusLogged = true;
+    }
     
     if (currentIndex < currentTaskData.length - 1) { // Use currentTaskData here
         currentIndex++; 
