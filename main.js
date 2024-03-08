@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     // Event listener for the "With AI" option
-    withAIInput.addEventListener('click', () => {
+    withoutAIInput.addEventListener('click', () => {
         loadScript('Advertisement_tasks.js');
     });
 
     // Event listener for the "Without AI" option
-    withoutAIInput.addEventListener('click', () => {
+    withAIInput.addEventListener('click', () => {
         loadScript('Robot_tasks.js');
     });
 
