@@ -5,9 +5,11 @@ package testsuite;
 
 import java.util.*;
 
+import com.google.common.collect.Collections2;
+
 public class Customer {
     private Set<String> preferences;  // set of preferences
-    private List<String> advertisements;   // list of received advertisements
+    public List<String> advertisements;   // list of received advertisements
     private int maxAdvs;     // maximum number of ads a customer can have
 
     public Customer(Set<String> preferences, List<String> advertisements, int maxAdvs) {
@@ -50,23 +52,18 @@ public class Customer {
         }
     }
 
-    public List<String> readAdvertisements(int n) {
-        int count = Math.min(n, this.advertisements.size());  // It will be equal to n if n is less than or equal size of list
-        
-        List<String> lastNAdv = new ArrayList<>(this.advertisements.subList(this.advertisements.size() - count, this.advertisements.size()));
-      
-        // Print the advertisement
-        for (String adv : lastNAdv) {
-            System.out.println(adv);
+    public void readAdvertisements(int n) {
+        int size = this.advertisements.size();
+        int count = Math.min(n, size);  // Number of advertisements to print/remove
+    
+        // Print the last 'count' advertisements in reverse order
+        for (int i = size - 1; i >= size - count; i--) {
+            System.out.println(this.advertisements.get(i));
         }
-        
-        // Delete from list
-        this.advertisements.removeAll(lastNAdv);
     
-        return lastNAdv;  // Return deleted advertisements
+        // Remove the printed advertisements from the list
+        this.advertisements = new ArrayList<>(this.advertisements.subList(0, size - count));
     }
-
-    
     
 }
 
