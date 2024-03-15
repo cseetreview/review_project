@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     // Event listener for the "With AI" option
-    withAIInput.addEventListener('click', () => {
+    withoutAIInput.addEventListener('click', () => {
         loadScript('Advertisement_tasks.js');
     });
 
     // Event listener for the "Without AI" option
-    withoutAIInput.addEventListener('click', () => {
+    withAIInput.addEventListener('click', () => {
         loadScript('Robot_tasks.js');
     });
 
@@ -91,12 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
         scriptElement.onload = function() {
             if (scriptName === "Advertisement_tasks.js") {
                 currentTaskData = advertisement_tasks;
-                if (aiOption === "With AI") {
+                if (aiOption === "Without AI") {
                     displayTask(0);
                 }
             } else if (scriptName === "Robot_tasks.js") {
                 currentTaskData = robot_tasks;
-                if (aiOption === "Without AI") {
+                if (aiOption === "With AI") {
                     displayTask(0);
                 }
             }
