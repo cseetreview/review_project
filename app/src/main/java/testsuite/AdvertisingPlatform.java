@@ -38,18 +38,22 @@ public class AdvertisingPlatform {
 
     public boolean checkValidity(String adv) {
         // Check if advertisement has more than 20 words
-        String[] words = adv.split("\\s+");
+        String[] words = adv.trim().split("\\s+"); // Use regex to split on any whitespace
+        System.out.println("Word count: " + words.length);
+        System.out.println("Words: " + Arrays.toString(words));
+        
         if (words.length > 20) {
             return false;
-         }
-      
-        // Check if the advertisement contains any of forbidden words
+        }
+    
+        // Check if the advertisement contains any forbidden words
         for (String word : words) {
             if (this.forbiddenWords.contains(word)) {
                 return false;
-             }
-          }
-      
+            }
+        }
+    
         return true;  // If not returned yet, then it means the advertisement is valid
     }
+    
 }
