@@ -185,13 +185,19 @@ public void testCheckValidityValid() {
     assertTrue(platform.checkValidity(advertisement));
 }
 
+
 @Test
 public void testCheckValidityTooLong() {
-    AdvertisingPlatform platform = new AdvertisingPlatform(new HashSet<>()); 
-    String advertisement = "This advertisement is definitely more than twenty words long so it should not be considered valid.";
-
-    assertFalse(platform.checkValidity(advertisement));
+    AdvertisingPlatform platform = new AdvertisingPlatform(preferences); 
+    String advertisement = "one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty one";
+    
+    boolean result = platform.checkValidity(advertisement);
+    System.out.println("Advertisement validity: " + result); // Should print false
+    assertFalse(result);
 }
+
+
+
 @Test
 public void testCheckValidityForbiddenWord() {
     AdvertisingPlatform platform = new AdvertisingPlatform(new HashSet<>(Arrays.asList("badword")));
